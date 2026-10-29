@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mira Sen | Creative Developer (demo portfolio)</title>
+<meta name="description" content="Mira Sen is a fictional creative developer. A comic style portfolio demo with halftone art, swinging panels and thread lines. Website by Mohammad Gulab.">
+<meta name="theme-color" content="#e8322b">
+<meta property="og:title" content="Mira Sen | Creative Developer">
+<meta property="og:description" content="A comic book style portfolio demo. Website by Mohammad Gulab.">
+<meta property="og:image" content="https://mohammadgulab.github.io/demo-web/og.png">
+<meta property="og:url" content="https://mohammadgulab.github.io/demo-web/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8322b'/%3E%3Ctext x='32' y='46' font-family='Impact,sans-serif' font-size='38' text-anchor='middle' fill='%23fff7e8'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lexend:wght@400;600;800&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="trail" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="brand" href="#top"><span class="brand-m">M</span><span class="brand-t">Mira Sen</span><span class="issue">Issue #01</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#about">About</a><a href="#skills">Powers</a><a href="#work">Work</a><a href="#story">Story</a><a class="nav-cta" href="#contact">Say hi</a>
+  </nav>
+  <a class="menu-btn" href="#menu" aria-controls="menu" aria-expanded="false"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-lbl">Menu</span></a>
+</header>
+
+<div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-inner">
+    <a class="menu-close" href="#top" aria-label="Close menu">Close <b aria-hidden="true">&times;</b></a>
+    <p class="menu-kicker">Where to, hero?</p>
+    <nav aria-label="Mobile">
+      <a href="#about"><span>01</span>About</a>
+      <a href="#skills"><span>02</span>Powers</a>
+      <a href="#work"><span>03</span>Work</a>
+      <a href="#story"><span>04</span>Story</a>
+      <a href="#contact"><span>05</span>Say hi</a>
+    </nav>
+    <p class="menu-foot">Demo portfolio. Website by <a href="https://mohammadgulab.github.io/">Mohammad Gulab</a></p>
+  </div>
+</div>
+
+<main id="main">
+<svg class="thread" id="thread" aria-hidden="true"><path id="threadPath" d=""/><g id="knots"></g></svg>
+
+<section class="hero" id="top">
+  <svg class="webc tl" viewBox="0 0 160 160" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M0 0 L160 30 M0 0 L120 120 M0 0 L30 160 M0 0 L160 80 M0 0 L80 160"/><path d="M40 7 Q34 22 29 29 Q22 34 7 40"/><path d="M80 15 Q66 44 57 57 Q44 66 15 80 "/><path d="M120 22 Q100 66 85 85 Q66 100 22 120"/><path d="M80 15 Q100 30 109 40 M120 22 Q140 40 145 55"/></g></svg><svg class="webc tr" viewBox="0 0 160 160" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M0 0 L160 30 M0 0 L120 120 M0 0 L30 160 M0 0 L160 80 M0 0 L80 160"/><path d="M40 7 Q34 22 29 29 Q22 34 7 40"/><path d="M80 15 Q66 44 57 57 Q44 66 15 80 "/><path d="M120 22 Q100 66 85 85 Q66 100 22 120"/><path d="M80 15 Q100 30 109 40 M120 22 Q140 40 145 55"/></g></svg>
+  <div class="hero-copy">
+    <p class="caption">Meanwhile, somewhere between design and code...</p>
+    <h1 class="kinetic" aria-label="Mira Sen"><span class="w">MIRA</span> <span class="w red">SEN</span></h1>
+    <p class="role"><span class="role-tag">Creative developer</span> who swings between pixels and code to build websites that feel alive.</p>
+    <div class="cta">
+      <a class="btn btn-red" href="#work">See my work</a>
+      <a class="btn btn-ink" href="#contact">Say hi</a>
+    </div>
+    <ul class="hero-tags" aria-label="Focus">
+      <li>UI design</li><li>Motion</li><li>Front end</li>
+    </ul>
+  </div>
+  <div class="hero-art">
+    <div class="hang" id="hang">
+      <span class="hang-line" aria-hidden="true"></span>
+      <div class="hang-card"><svg class="avatar" viewBox="0 0 220 260" role="img" aria-label="Illustrated portrait of Mira Sen">
+  <defs>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.8" fill="#1b2a6b" opacity=".35"/></pattern>
+    <clipPath id="frameclip"><rect x="6" y="6" width="208" height="248" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#frameclip)">
+    <rect x="6" y="6" width="208" height="248" fill="#ffd23f"/>
+    <rect x="6" y="6" width="208" height="248" fill="url(#dots)"/>
+    <path d="M6 190 L214 120 L214 254 L6 254Z" fill="#e8322b" opacity=".9"/>
+    <path d="M30 196 Q110 150 190 196 L214 254 L6 254Z" fill="#1b2a6b" stroke="#111" stroke-width="4"/>
+    <path d="M86 186 L110 230 L134 186" fill="none" stroke="#e8322b" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M92 160 L92 192 Q110 204 128 192 L128 160Z" fill="#c98a63" stroke="#111" stroke-width="4"/>
+    <path d="M56 104 Q50 52 110 44 Q170 52 164 104 L170 168 Q140 178 128 150 L92 150 Q80 178 50 168Z" fill="#1d1a2b" stroke="#111" stroke-width="4"/>
+    <circle cx="110" cy="34" r="20" fill="#1d1a2b" stroke="#111" stroke-width="4"/>
+    <path d="M94 40 Q110 28 126 40" fill="none" stroke="#e8322b" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="110" cy="108" rx="44" ry="52" fill="#e3a77f" stroke="#111" stroke-width="4"/>
+    <path d="M66 96 Q78 58 112 60 Q146 58 156 98 Q132 76 118 86 Q100 70 66 96Z" fill="#1d1a2b"/>
+    <circle cx="90" cy="110" r="15" fill="#fff" fill-opacity=".35" stroke="#e8322b" stroke-width="5"/>
+    <circle cx="130" cy="110" r="15" fill="#fff" fill-opacity=".35" stroke="#e8322b" stroke-width="5"/>
+    <path d="M105 110 L115 110" stroke="#e8322b" stroke-width="5"/>
+    <circle class="eye" cx="91" cy="111" r="4.5" fill="#111"/>
+    <circle class="eye" cx="129" cy="111" r="4.5" fill="#111"/>
+    <path d="M82 92 Q90 87 98 91 M122 91 Q130 87 138 92" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="78" cy="130" rx="7" ry="4" fill="#e8322b" opacity=".35"/>
+    <ellipse cx="142" cy="130" rx="7" ry="4" fill="#e8322b" opacity=".35"/>
+    <path d="M110 116 Q106 126 111 128" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 138 Q110 150 124 138" fill="#fff" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="66" cy="124" r="5" fill="#ffd23f" stroke="#111" stroke-width="3"/>
+    <circle cx="154" cy="124" r="5" fill="#ffd23f" stroke="#111" stroke-width="3"/>
+  </g>
+  <rect x="6" y="6" width="208" height="248" rx="18" fill="none" stroke="#111" stroke-width="6"/>
+</svg></div>
+      <div class="bubble bubble-hero">Hey! I make the web a little more fun.</div>
+    </div>
+    <span class="sfx sfx-zip" aria-hidden="true">ZIP!</span>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to about"><span>Scroll</span></a>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true"><div class="marquee"><div class="marquee-track"><span>DESIGN</span><b>&#9733;</b><span>CODE</span><b>&#9733;</b><span>MOTION</span><b>&#9733;</b><span>STORIES</span><b>&#9733;</b><span>DESIGN</span><b>&#9733;</b><span>CODE</span><b>&#9733;</b><span>MOTION</span><b>&#9733;</b><span>STORIES</span><b>&#9733;</b></div></div></div>
+
+<section class="sec about" id="about">
+  <span class="knot" aria-hidden="true"></span>
+  <header class="sec-head swing">
+    <p class="chapter">Chapter 1</p>
+    <h2>The origin story</h2>
+  </header>
+  <div class="strip">
+    <article class="panel swing">
+      <p class="cap">By day</p>
+      <div class="panel-art art-day" aria-hidden="true"><span class="sun"></span><span class="screen"></span></div>
+      <p>I design clean, friendly interfaces for small brands and startups in Pune.</p>
+    </article>
+    <article class="panel swing r">
+      <p class="cap">By night</p>
+      <div class="panel-art art-night" aria-hidden="true"><span class="moon"></span><span class="code">&lt;/&gt;</span></div>
+      <p>I build playful web experiments with SVG, canvas and a lot of curiosity.</p>
+    </article>
+    <article class="panel swing">
+      <p class="cap">Always</p>
+      <div class="panel-art art-always" aria-hidden="true"><span class="sfx-mini">POP!</span></div>
+      <p>Chasing the perfect hover state, the smoothest scroll and copy that sounds human.</p>
+    </article>
+  </div>
+  <div class="about-text swing r">
+    <div class="bubble bubble-big">
+      <p>I started drawing comics in the back of my school notebooks. Today I draw with code. I love turning a plain brief into a site people actually want to scroll, and I care just as much about speed, accessibility and clean handover.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec skills" id="skills">
+  <span class="knot" aria-hidden="true"></span>
+  <header class="sec-head swing r">
+    <p class="chapter">Chapter 2</p>
+    <h2>Super powers</h2>
+  </header>
+  <div class="powers">
+    <article class="power swing">
+      <div class="power-ico" aria-hidden="true">&#9998;</div>
+      <h3>Design</h3>
+      <ul class="chips"><li>UI and UX design</li><li>Brand identity</li><li>Illustration</li><li>Design systems</li><li>Wireframes</li></ul>
+    </article>
+    <article class="power swing r">
+      <div class="power-ico" aria-hidden="true">{ }</div>
+      <h3>Code</h3>
+      <ul class="chips"><li>HTML and CSS</li><li>JavaScript</li><li>React</li><li>SVG animation</li><li>Accessibility</li></ul>
+    </article>
+    <article class="power swing">
+      <div class="power-ico" aria-hidden="true">&#10022;</div>
+      <h3>Motion</h3>
+      <ul class="chips"><li>Scroll stories</li><li>Micro interactions</li><li>Lottie</li><li>Canvas</li><li>Page transitions</li></ul>
+    </article>
+    <article class="power swing r">
+      <div class="power-ico" aria-hidden="true">&#9874;</div>
+      <h3>Toolbelt</h3>
+      <ul class="chips"><li>Figma</li><li>Git</li><li>VS Code</li><li>Blender basics</li><li>Notion</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec work" id="work">
+  <span class="knot" aria-hidden="true"></span>
+  <header class="sec-head swing">
+    <p class="chapter">Chapter 3</p>
+    <h2>Case files</h2>
+    <p class="sub">A few projects I loved building.</p>
+  </header>
+  <div class="cards">
+    <article class="card swing" tabindex="0">
+      <div class="card-art"><svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#1b2a6b"/><g fill="#ffd23f"><circle cx="60" cy="60" r="10"/><circle cx="150" cy="110" r="10"/><circle cx="250" cy="70" r="10"/><circle cx="210" cy="160" r="10"/></g><path d="M60 60 Q100 120 150 110 T250 70 M150 110 Q170 160 210 160" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="8 8"/><g stroke="#e8322b" stroke-width="6" fill="#e8322b"><path d="M150 82 l-14 -22 a16 16 0 1 1 28 0z"/></g><circle cx="150" cy="50" r="6" fill="#fff"/><rect x="18" y="150" width="90" height="30" rx="6" fill="#fff7e8" stroke="#111" stroke-width="3"/><text x="63" y="171" font-family="Bangers,Impact,sans-serif" font-size="18" text-anchor="middle" fill="#111">EAT HERE</text></svg></div>
+      <span class="sticker s-yellow">Web app</span>
+      <h3>Night Market Map</h3>
+      <p>An interactive map for a weekend street food festival, so visitors can find stalls, music and the shortest queue.</p>
+      <ul class="tags"><li>Mapping</li><li>SVG</li><li>Mobile first</li></ul>
+    </article>
+    <article class="card swing r" tabindex="0">
+      <div class="card-art"><svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#e8322b"/><g fill="#fff7e8" opacity=".25"><circle cx="40" cy="40" r="3"/><circle cx="60" cy="40" r="3"/><circle cx="50" cy="56" r="3"/><circle cx="280" cy="160" r="3"/><circle cx="260" cy="160" r="3"/></g><circle cx="110" cy="100" r="62" fill="#111"/><circle cx="110" cy="100" r="48" fill="none" stroke="#333" stroke-width="2"/><circle cx="110" cy="100" r="34" fill="none" stroke="#333" stroke-width="2"/><circle cx="110" cy="100" r="18" fill="#ffd23f"/><circle cx="110" cy="100" r="4" fill="#111"/><g fill="#fff7e8"><rect x="200" y="110" width="12" height="40" rx="3"/><rect x="218" y="80" width="12" height="70" rx="3"/><rect x="236" y="96" width="12" height="54" rx="3"/><rect x="254" y="64" width="12" height="86" rx="3"/><rect x="272" y="100" width="12" height="50" rx="3"/></g></svg></div>
+      <span class="sticker s-blue">Brand + site</span>
+      <h3>Loop Radio</h3>
+      <p>A bold identity and a live web player for an indie community radio, with a playlist wall and show schedule.</p>
+      <ul class="tags"><li>Branding</li><li>Audio UI</li><li>React</li></ul>
+    </article>
+    <article class="card swing" tabindex="0">
+      <div class="card-art"><svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#fff7e8"/><g fill="#1b2a6b" opacity=".18"><circle cx="20" cy="20" r="4"/><circle cx="40" cy="20" r="4"/><circle cx="30" cy="36" r="4"/><circle cx="50" cy="36" r="4"/><circle cx="40" cy="52" r="4"/></g><path d="M30 170 Q120 60 200 120 T300 40" fill="none" stroke="#1b2a6b" stroke-width="3" stroke-dasharray="6 10"/><path d="M230 60 L310 30 L270 100 L258 78 Z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/><path d="M258 78 L310 30 L246 72Z" fill="#e8322b" stroke="#111" stroke-width="4" stroke-linejoin="round"/><rect x="34" y="40" width="120" height="16" rx="8" fill="#111"/><rect x="34" y="66" width="80" height="10" rx="5" fill="#1b2a6b"/></svg></div>
+      <span class="sticker s-red">Scroll story</span>
+      <h3>Paper Plane Studio</h3>
+      <p>A scroll driven story site for a small animation studio. A paper plane flies you through their process.</p>
+      <ul class="tags"><li>Motion</li><li>Storytelling</li><li>Canvas</li></ul>
+    </article>
+    <article class="card swing r" tabindex="0">
+      <div class="card-art"><svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#ffd23f"/><g stroke="#1b2a6b" stroke-width="3" stroke-linecap="round"><path d="M40 30 l-6 14 M70 20 l-6 14 M100 34 l-6 14 M240 24 l-6 14 M270 36 l-6 14 M210 40 l-6 14"/></g><rect x="96" y="44" width="128" height="140" rx="16" fill="#fff" stroke="#111" stroke-width="5"/><rect x="112" y="66" width="70" height="10" rx="5" fill="#e8322b"/><rect x="112" y="88" width="96" height="8" rx="4" fill="#1b2a6b" opacity=".6"/><rect x="112" y="104" width="84" height="8" rx="4" fill="#1b2a6b" opacity=".6"/><rect x="112" y="120" width="92" height="8" rx="4" fill="#1b2a6b" opacity=".6"/><circle cx="196" cy="160" r="12" fill="#1b2a6b"/><path d="M190 160 h12 M196 154 v12" stroke="#fff" stroke-width="3"/></svg></div>
+      <span class="sticker s-yellow">App UI</span>
+      <h3>Monsoon Notes</h3>
+      <p>A calm journaling app concept with rainy day themes, gentle sounds and a writing mode that hides everything else.</p>
+      <ul class="tags"><li>Product design</li><li>Prototype</li><li>Figma</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec story" id="story">
+  <span class="knot" aria-hidden="true"></span>
+  <header class="sec-head swing r">
+    <p class="chapter">Chapter 4</p>
+    <h2>The story so far</h2>
+  </header>
+  <ol class="timeline">
+    <li class="tl swing">
+      <p class="tl-when">Now</p>
+      <div class="tl-body"><h3>Freelance creative developer</h3><p>Design and build for small brands, studios and makers. Strategy, design and code under one roof.</p></div>
+    </li>
+    <li class="tl swing r">
+      <p class="tl-when">Before that</p>
+      <div class="tl-body"><h3>UI developer, Paperkite Studio</h3><p>Turned designs into fast, accessible front ends and grew the team's little library of reusable components.</p></div>
+    </li>
+    <li class="tl swing">
+      <p class="tl-when">Where it began</p>
+      <div class="tl-body"><h3>Design intern, Lantern Labs</h3><p>Learned to listen to users, sketch fast and ship small. Also learned that coffee is a design tool.</p></div>
+    </li>
+    <li class="tl swing r">
+      <p class="tl-when">Training</p>
+      <div class="tl-body"><h3>B.Des in Communication Design</h3><p>Typography, illustration and interaction design, plus many late nights in the print lab.</p></div>
+    </li>
+  </ol>
+</section>
+
+<section class="sec contact" id="contact">
+  <span class="knot" aria-hidden="true"></span>
+  <svg class="webc bl" viewBox="0 0 160 160" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M0 0 L160 30 M0 0 L120 120 M0 0 L30 160 M0 0 L160 80 M0 0 L80 160"/><path d="M40 7 Q34 22 29 29 Q22 34 7 40"/><path d="M80 15 Q66 44 57 57 Q44 66 15 80 "/><path d="M120 22 Q100 66 85 85 Q66 100 22 120"/><path d="M80 15 Q100 30 109 40 M120 22 Q140 40 145 55"/></g></svg><svg class="webc br" viewBox="0 0 160 160" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M0 0 L160 30 M0 0 L120 120 M0 0 L30 160 M0 0 L160 80 M0 0 L80 160"/><path d="M40 7 Q34 22 29 29 Q22 34 7 40"/><path d="M80 15 Q66 44 57 57 Q44 66 15 80 "/><path d="M120 22 Q100 66 85 85 Q66 100 22 120"/><path d="M80 15 Q100 30 109 40 M120 22 Q140 40 145 55"/></g></svg>
+  <div class="contact-wrap swing">
+    <p class="chapter">Final chapter</p>
+    <h2 class="kinetic-sm">Got a wild idea?</h2>
+    <div class="bubble bubble-contact"><p>Let's build it together. Tell me about your project and I will reply with a plan.</p></div>
+    <div class="cta">
+      <a class="btn btn-red" href="mailto:hello@mirasen.example?subject=Project%20idea">Email Mira</a>
+      <button class="btn btn-ink copy" type="button" data-copy="hello@mirasen.example">Copy email</button>
+    </div>
+    <p class="copy-note" aria-live="polite"></p>
+    <span class="sfx sfx-boom" aria-hidden="true">SWOOSH!</span>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p><strong>Demo website.</strong> Mira Sen is a fictional person, and the projects, studios and email on this page are made up to show a portfolio design. Portrait and artwork are original illustrations drawn in code.</p>
+  <p class="credit">Website by <a href="https://mohammadgulab.github.io/">Mohammad Gulab</a></p>
+</footer>
+<script src="main.js?v=1" defer></script>
+</body>
+</html>
